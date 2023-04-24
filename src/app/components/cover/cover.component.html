@@ -1,1 +1,42 @@
-<h1>I am the cover page</h1>
+
+<div class="row">
+    <span><img src="../../../assets/proquo-logo.svg" height="50" width="61" /></span>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+      <div class="form-group row">
+        <div *ngFor="let item of menuItems">
+            <div class="padding">
+                <div>{{item.name}}</div>    
+                <div>{{item.description}}</div>  
+                <div>R{{item.price}}</div>  
+                <button type="button" class="primary" [routerLink]="['/menu', item.id]">Open</button>
+                <!-- <button type="button" class="primary" data-toggle="modal" data-target="#myMenu">Open</button> -->
+            </div>    
+        </div> 
+      </div>
+    </div>
+</div>
+
+
+<!-- <div id="myMenu" class="modal fade " data-backdrop="false" tabindex="-1" role="dialog" area-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">Detailed Menu</h1>
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger float-right btn-sm"
+                    data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div> -->
+  

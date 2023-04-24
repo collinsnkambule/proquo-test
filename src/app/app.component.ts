@@ -10,5 +10,5 @@ import { ResponsiveSidenavComponent } from './components/responsive-sidenav/resp
   imports: [RouterModule, ResponsiveSidenavComponent],
 })
 export class AppComponent {
-  navItems: { label: string; routerLink: string[] }[] = [{ label: 'Instructions', routerLink: ['instructions'] }];
+  navItems: { label: string; routerLink: string[] }[] = [{ label: 'menu', routerLink: ['menu'] },{ label: 'Instructions', routerLink: ['instructions'] }];
 }

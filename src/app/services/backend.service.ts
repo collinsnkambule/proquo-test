@@ -5,7 +5,7 @@ import { shuffleArray } from '../utils/array-functions';
 import { getRandomNumberBetween, uuidv4 } from '../utils/common-functions';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class BackendService {
   #appetizers: MenuItem[];
@@ -134,7 +134,7 @@ export class BackendService {
 
     const ingredients = Array.from({ length: 6 }, (_, i: number) => `Ingredient number ${i + 1}`);
 
-    return lastValueFrom(of(new MenuItemMetadata(ingredients)).pipe(delay(serverDelay)));
+    return lastValueFrom(of(new MenuItemMetadata(ingredients, this.#menuItemImageUrls[this.#menuItemImageUrls.length - 1],)).pipe(delay(serverDelay)));
   }
 
   /**
